@@ -6,7 +6,8 @@ const Button = () => {
     const navigate = useNavigate();
 
     return (
-        <button onClick={() => navigate(CODE_PATH)}>Take me to the code</button>
+        
+        <button onClick={() => navigate(CODE_PATH)}>Try our Code Playground!</button>
     );
   
 }

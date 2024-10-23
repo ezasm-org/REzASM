@@ -34,17 +34,19 @@ const Header = () => {
             className={`fixed top-0 left-0 w-full z-50 border-b lg:bg-n-8/90 lg:backdrop-blur-sm 
                 ${openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"}`} 
         >
-            <div className="flex items-center px-5 lg:px-7.5 xl:px-10 
-                max-lg:py-4">
 
-                <a className="block w-[12rem] xl:mr-8" href="#hero">
-                    <img src={ezasm} width={70} height={40} alt="ezasm"/>
+            <div className="flex items-center px-6 lg:px-12 xl:px-20 max-lg:py-4">
+                <a className="flex items-center w-[12rem] xl:mr-8 ml-10 lg:ml-16" href="#hero">
+                    <img src={ezasm} width={70} height={40} alt="ezasm" />
+                    <span className="ml-4 text-2xl lg:text-4xl font-bold text-black">
+                        EZASM
+                    </span>
                 </a>
 
                 <nav
                     className={`${openNavigation ? "flex" : "hidden"} 
                     fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static 
-                    lg:flex lg:mx-auto lg:bg-transparent`}
+                    lg:flex lg:mx-auto lg:bg-transparent mr-10 lg:mr-16`}
                 >
                     <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
                         {navigation.map((item) => (
@@ -52,9 +54,9 @@ const Header = () => {
                                 key={item.id}
                                 href={item.url}
                                 onClick={handleClick}
-                                className= {`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1
+                                className= {`block relative font-code text-4xl uppercase text-n-1 transition-colors hover:text-color-1
                                 ${item.onlyMobile ? "lg:hidden" : ""}
-                                px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold
+                                px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-base lg:font-semibold
                                 ${
                                     item.url === pathname.hash
                                       ? "z-2 lg:text-n-1"
@@ -66,9 +68,11 @@ const Header = () => {
                             </a>
                         ))}
                     </div>
-
-
                 </nav>
+
+
+
+                
 
             </div>
             
