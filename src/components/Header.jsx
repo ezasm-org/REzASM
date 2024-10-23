@@ -2,7 +2,7 @@ import React from 'react'
 import { useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import { navigation } from "../constants";
-import ezasm from "../assets/ezasm.svg";
+import ezasm from "../assets/white.svg";
 
 import { useState } from "react";
 
@@ -31,14 +31,16 @@ const Header = () => {
 
     return (
         <div 
-            className={`fixed top-0 left-0 w-full z-50 border-b lg:bg-n-8/90 lg:backdrop-blur-sm 
-                ${openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"}`} 
+            style={{ boxShadow: '0 10px 20px rgba(0, 0, 0, 0.3)' }}
+            className={`fixed top-0 left-0 w-full z-50 border-b lg:bg-n-8/90 lg:backdrop-blur-sm bg-black
+            ${openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"}`} 
         >
+
 
             <div className="flex items-center px-6 lg:px-12 xl:px-20 max-lg:py-4">
                 <a className="flex items-center w-[12rem] xl:mr-8 ml-10 lg:ml-16" href="#hero">
                     <img src={ezasm} width={70} height={40} alt="ezasm" />
-                    <span className="ml-4 text-2xl lg:text-4xl font-bold text-black">
+                    <span className="ml-4 text-2xl lg:text-4xl font-bold text-white">
                         EZASM
                     </span>
                 </a>

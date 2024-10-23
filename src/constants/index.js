@@ -9,15 +9,8 @@ export const navigation = [
       title: "Features",
       url: "#features",
     },
-
     {
-      id: "0",
-      title: "Playground",
-      url: "#playground",
-    },
-
-    {
-      id: "0",
+      id: "2",
       title: "Contributors",
       url: "#contributors",
     },
