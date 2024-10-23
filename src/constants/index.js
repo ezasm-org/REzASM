@@ -6,8 +6,8 @@ export const navigation = [
     },
     {
       id: "1",
-      title: "Contributors",
-      url: "#contributors",
+      title: "Contributions",
+      url: "#contributions",
     },
     
 ];

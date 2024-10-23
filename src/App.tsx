@@ -20,8 +20,13 @@ const App = () => {
                         <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
                             <Header />
                             <Hero />
-                            <About/>
-                            <Contributors />
+                            <section id="about">
+                                <About />
+                            </section>
+
+                            <section id="contributions">
+                                <Contributors />
+                            </section>
                             <Footer />
                         </div>
                     } 
