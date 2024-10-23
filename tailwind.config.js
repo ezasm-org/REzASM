@@ -3,7 +3,11 @@ export default {
     content: ["./src/components/*.jsx", 
         "./src/App.tsx"],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                'gpt-dark': '#27282c',
+              },
+        },
     },
     plugins: [],
 };

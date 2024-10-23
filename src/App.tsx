@@ -1,24 +1,41 @@
-import {HashRouter, Route, Routes} from "react-router-dom";
-import Code from "./components/Code.jsx";
-import Home from "./components/Home.jsx";
-import Downloads from "./components/Downloads.jsx";
-import "../dist/output.css";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import Header from './components/Header';
+import Code from './components/Code';
+import Contributors from "./components/Contributors";
+import About from "./components/About";
+import Hero from "./components/Hero";
+import Footer from "./components/Footer";
 
 const HOME_PATH = "/";
-const CODE_PATH = "/code/";
-const DOWNLOAD_PATH = "/downloads/";
+const CODE_PATH = "/code";
+const DOWNLOAD_PATH = "/downloads";
 
-function App() {
+const App = () => {
     return (
-        <HashRouter future={{ v7_startTransition: true }}>
+        <BrowserRouter>
             <Routes>
-                <Route path={HOME_PATH} element={<Home />} />
+                <Route 
+                    path={HOME_PATH} 
+                    element={
+                        <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
+                            <Header />
+                            <Hero />
+                            <section id="about">
+                                <About />
+                            </section>
+
+                            <section id="contributions">
+                                <Contributors />
+                            </section>
+                            <Footer />
+                        </div>
+                    } 
+                />
                 <Route path={CODE_PATH} element={<Code />} />
-                <Route path={DOWNLOAD_PATH} element={<Downloads />} />
             </Routes>
-        </HashRouter>
+        </BrowserRouter>
     );
-}
+};
 
 export default App;
 
